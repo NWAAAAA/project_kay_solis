@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Back Arrow -->
+
+
+        <!-- Welcome Back -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Login Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+        <!-- REMOVED LOGO + FITFURS TEXT -->
+
+        <!-- EMAIL FIELD -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"/>
+
+        <!-- PASSWORD FIELD -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_input">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+        </RelativeLayout>
+
+        <!-- LOGIN BUTTON -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"/>
+
+        <!-- SIGN UP -->
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?  Sign Up"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+</ScrollView>

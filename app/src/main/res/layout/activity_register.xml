@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_gravity="start" />
+
+        <!-- Hello -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Sign Up Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+        <!-- USERNAME FIELD -->
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:textSize="16sp"/>
+
+        <!-- PASSWORD FIELD -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:padding="12dp"
+            android:background="@drawable/rounded_input"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="16sp"/>
+
+        <!-- ROLE DROPDOWN (ADDED) -->
+        <Spinner
+            android:id="@+id/spinnerRole"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/rounded_input"
+            android:padding="12dp" />
+
+        <!-- SIGN UP BUTTON -->
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"/>
+
+        <!-- LOGIN TEXT -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?  Login"
+            android:textSize="15sp"
+            android:layout_marginTop="18dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+</ScrollView>
