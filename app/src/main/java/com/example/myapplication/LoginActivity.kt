@@ -37,7 +37,7 @@ class LoginActivity : ComponentActivity() {
             }
         }
 
-        // SIGN UP TEXT
+
         signUpText.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
