@@ -15,12 +15,10 @@ class LoginActivity : ComponentActivity() {
 
         db = DBHelper(this)
 
-        // MATCH XML IDs
         val email = findViewById<EditText>(R.id.etEmail)
         val password = findViewById<EditText>(R.id.etPassword)
         val loginBtn = findViewById<Button>(R.id.btnLogin)
         val signUpText = findViewById<TextView>(R.id.tvSignUp)
-
 
         // LOGIN BUTTON
         loginBtn.setOnClickListener {
@@ -30,7 +28,11 @@ class LoginActivity : ComponentActivity() {
                 Toast.makeText(this, "Invalid Credentials", Toast.LENGTH_SHORT).show()
             } else {
                 val i = Intent(this, TableActivity::class.java)
+
+                // ✅ SEND BOTH ROLE AND USERNAME
                 i.putExtra("role", user.role)
+                i.putExtra("username", user.username)
+
                 startActivity(i)
             }
         }

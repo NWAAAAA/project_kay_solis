@@ -12,6 +12,7 @@ class TableActivity : AppCompatActivity() {
     lateinit var db: DBHelper
     lateinit var listView: ListView
     lateinit var btnLogout: Button
+    lateinit var tvUsername: TextView   // <-- Added
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +21,13 @@ class TableActivity : AppCompatActivity() {
         db = DBHelper(this)
         listView = findViewById(R.id.listUsers)
         btnLogout = findViewById(R.id.btnLogout)
+        tvUsername = findViewById(R.id.tvUsername)  // <-- Added
 
         val role = intent.getStringExtra("role") ?: "user"
+        val username = intent.getStringExtra("username") ?: "Unknown User"
+
+        // Show username on top-left
+        tvUsername.text = "Logged in as: $username"
 
         // Load users based on role
         loadUsers(role)
@@ -35,7 +41,7 @@ class TableActivity : AppCompatActivity() {
     private fun logoutUser() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
-        finish() // Prevent going back
+        finish()  // Prevent going back
     }
 
     private fun loadUsers(role: String) {
@@ -51,7 +57,7 @@ class TableActivity : AppCompatActivity() {
                 showEditDeleteDialog(users[position])
             }
         } else {
-            // Disable click for non-admin users
+            // Non-admin cannot edit
             listView.setOnItemClickListener { _, _, _, _ ->
                 Toast.makeText(this, "Only admin can edit users", Toast.LENGTH_SHORT).show()
             }
